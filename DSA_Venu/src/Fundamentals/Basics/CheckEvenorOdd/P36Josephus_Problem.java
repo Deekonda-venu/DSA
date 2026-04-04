@@ -12,28 +12,26 @@ public class P36Josephus_Problem {
     }
 
     static public int josephus(P36Josephus_Problem p){
-        int result = 0;
-        boolean n = true;
-        int start = p.k;
-        int len = p.n.size();
-        int rotaion=0;
-        while(n){
-
-            for(int i=start; i<len; i++){
-                rotaion = rotaion+1;
-                if(rotaion==len){
-                    p.n.remove(i);
-
-                }
-            }
+        if (p == null || p.n == null || p.n.isEmpty() || p.k <= 0) {
+            return -1;
         }
-        return result;
+
+        int idx = 0;
+        while (p.n.size() > 1) {
+            idx = (idx + p.k - 1) % p.n.size();
+            p.n.remove(idx);
+        }
+        return p.n.get(0);
     }
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
-        ArrayList<Integer> n = new ArrayList<>(5);
+        int cap = sc.nextInt();
+        ArrayList<Integer> n = new ArrayList<>(cap);
+        for (int i = 0; i < cap; i++) {
+            n.add(sc.nextInt());
+        }
         int k= sc.nextInt();
         P36Josephus_Problem p36 = new P36Josephus_Problem(n,k);
-        josephus(p36);
+        System.out.println(josephus(p36));
     }
 }
