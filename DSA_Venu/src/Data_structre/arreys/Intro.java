@@ -35,3 +35,32 @@
 //
 //    In short, arrays are one of the most fundamental and important data structures in programming. They are simple, fast, and widely used, but they lack flexibility in size and dynamic operations. Because of this, more advanced structures like ArrayList, LinkedList, etc. are used when flexibility is required.
 //}
+
+
+
+
+
+
+
+
+
+
+
+//IMP
+//!s.contains(arr[i])
+//
+//Common Collections
+//ArrayList
+//        LinkedList
+//HashSet
+//        TreeSet
+//HashMap (but here you use containsKey() or containsValue())
+
+
+
+
+
+
+
+
+
